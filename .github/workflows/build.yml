@@ -12,12 +12,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set version from commit hash
+      - name: Set version from commit count
         id: version
         shell: pwsh
         run: |
-          $hash = (git rev-parse --short HEAD)
-          echo "VERSION=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
+          $count = git rev-list --count HEAD
+          $version = "0.0.$count"
+          echo "VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: Create ZIP package (PowerShell)
         shell: pwsh
