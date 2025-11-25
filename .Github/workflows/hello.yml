@@ -6,5 +6,8 @@ jobs:
     hallo_job:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
+              name: Checkout Repository
+
             - name: Moin, sag mal Hallo
               run: echo "Hallo I Bims 1 Dennis"
