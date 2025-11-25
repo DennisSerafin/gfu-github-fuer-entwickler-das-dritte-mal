@@ -1,13 +1,14 @@
-name: Hallo Action
+name: Simple GitHub Actions Demo
 
 on: [push]
 
 jobs:
-    hallo_job:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-              name: Checkout Repository
+  demo-job:
+    runs-on: ubuntu-latest
 
-            - name: Moin, sag mal Hallo
-              run: echo "Hallo I Bims 1 Dennis"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello Message
+        run: echo "Willkommen zum Kurs 'GitHub für Entwickler' bei der GFU!"

@@ -6,7 +6,7 @@ Write-Host "Starting Git Hook setup..." -ForegroundColor Cyan
 # Check if we are in a Git repository
 if (-not (Test-Path ".git")) {
     Write-Host "Error: This is not a Git repository!" -ForegroundColor Red
-    Write-Host "   Run `"git init`" first." -ForegroundColor Yellow
+    Write-Host "   Run 'git init' first." -ForegroundColor Yellow
     exit 1
 }
 
@@ -40,8 +40,8 @@ Write-Host ""
 Write-Host "Git hook successfully installed!" -ForegroundColor Green
 Write-Host ""
 Write-Host "The pre-commit hook will now run on every 'git commit' and:" -ForegroundColor Cyan
-Write-Host "  • Warn about TODO comments" -ForegroundColor White
-Write-Host "  • Prevent committing files larger than 1MB" -ForegroundColor White
+Write-Host "  - Warn about TODO comments" -ForegroundColor White
+Write-Host "  - Prevent committing files larger than 1MB" -ForegroundColor White
 Write-Host ""
 Write-Host "Test the hook with:" -ForegroundColor Yellow
 Write-Host "  echo '# TODO: Test' > test-file.txt" -ForegroundColor White
