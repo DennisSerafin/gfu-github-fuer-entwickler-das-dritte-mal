@@ -48,4 +48,4 @@ A: Klar, je mehr Leute an Bord, desto besser!
 
 ## Noch Fragen?
 
-Meld dich, sonst gibt's 'n nassen Klabautermann!sadasd
+Meld dich, sonst gibt's 'n nassen Klabautermann!
