@@ -1,6 +1,14 @@
-Was geht ab Jau!
+# Moin, moin aus dem Norden! 👋
 
-## Warum dieses Repository?
+Willkommen zu diesem Projekt – hier wird nicht lang geschnackt, sondern gleich gemacht!
+
+> **Norddeutscher Witz:**  
+> "Was macht ein Hamburger, wenn er im Lotto gewinnt?  
+> Er arbeitet weiter. Aber nur halbtags, ist ja klar!"
+
+![Norddeutsch GIF](https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif)
+
+## Projektübersicht
 
 Weil Entwickler:innen nicht nur Code schreiben, sondern auch mal lachen müssen! 😄
 
