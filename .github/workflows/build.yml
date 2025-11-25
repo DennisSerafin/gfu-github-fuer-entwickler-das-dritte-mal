@@ -12,14 +12,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set version from commit hash
+        id: version
+        shell: pwsh
+        run: |
+          $hash = (git rev-parse --short HEAD)
+          echo "VERSION=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
+
       - name: Create ZIP package (PowerShell)
         shell: pwsh
         run: |
-          if (Test-Path -Path build.zip) { Remove-Item -Path build.zip }
-          Compress-Archive -Path src/* -DestinationPath build.zip
+          if (Test-Path -Path "build-$env:VERSION.zip") { Remove-Item -Path "build-$env:VERSION.zip" }
+          Compress-Archive -Path src/* -DestinationPath "build-$env:VERSION.zip"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: demo-build
-          path: build.zip
+          name: demo-build-${{ env.VERSION }}
+          path: build-${{ env.VERSION }}.zip
